@@ -1,0 +1,13 @@
+version: "3"
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres-playground
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: 0000
+    volumes:
+      - ./db:/var/lib/postgresql/data
